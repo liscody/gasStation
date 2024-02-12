@@ -1,0 +1,16 @@
+[
+  "error AlreadyInitialized()",
+  "error NewOwnerIsZeroAddress()",
+  "error NoHandoverRequest()",
+  "error Unauthorized()",
+  "event OwnershipHandoverCanceled(address indexed)",
+  "event OwnershipHandoverRequested(address indexed)",
+  "event OwnershipTransferred(address indexed,address indexed)",
+  "function cancelOwnershipHandover() payable",
+  "function completeOwnershipHandover(address) payable",
+  "function owner() view returns (address)",
+  "function ownershipHandoverExpiresAt(address) view returns (uint256)",
+  "function renounceOwnership() payable",
+  "function requestOwnershipHandover() payable",
+  "function transferOwnership(address) payable"
+]
