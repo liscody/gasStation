@@ -49,8 +49,8 @@ const ETHEREUM_TESTNET_KEYS: string[] = process.env.ETHEREUM_TESTNET_KEYS ?
 // See `config.networks`.
 // const POLYGON_MAINNET_KEYS: string[] = process.env.POLYGON_MAINNET_KEYS ?
 //     process.env.POLYGON_MAINNET_KEYS.split(",") : [];
-// const POLYGON_TESTNET_KEYS: string[] = process.env.POLYGON_TESTNET_KEYS ?
-//     process.env.POLYGON_TESTNET_KEYS.split(",") : [];
+const POLYGON_TESTNET_KEYS: string[] = process.env.POLYGON_TESTNET_KEYS ?
+    process.env.POLYGON_TESTNET_KEYS.split(",") : [];
 
 /*
  * The solc compiler optimizer configuration. (The optimizer is disabled by default).
@@ -127,17 +127,17 @@ const config: HardhatUserConfig = {
         sepolia: {
             url: process.env.SEPOLIA_URL || "",
             accounts: [...ETHEREUM_TESTNET_KEYS]
-        } //,
+        },
         // // Polygon.
         // // Example of adding of other networks.
         // polygon: {
         //     url: process.env.POLYGON_URL || "",
         //     accounts: [...POLYGON_MAINNET_KEYS]
         // },
-        // mumbai: {
-        //     url:  process.env.MUMBAI_URL || "",
-        //     accounts: [...POLYGON_TESTNET_KEYS]
-        // }
+        mumbai: {
+            url:  process.env.MUMBAI_URL || "",
+            accounts: [...POLYGON_TESTNET_KEYS]
+        }
     },
     contractSizer: {
         except: ["mocks/", "from-dependencies/"]
